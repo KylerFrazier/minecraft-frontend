@@ -1,8 +1,14 @@
-# Name the node stage "builder"
-FROM node:latest AS builder
-# Set working directory
+# Layer 1: Node image for building the application
+FROM node:17-alpine AS builder
 WORKDIR /app
-# Copy all files from current directory to working dir in image
 COPY . .
-# install node modules and build assets
-RUN npm install && npm build
+RUN yarn install && yarn build
+
+# Layer 2: Nginx image for serving the website
+FROM nginx:1.21.4-alpine
+# TODO: I'm not sure if this serving location is standard convention
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=builder /app/build .
+# TODO: These entrypoint arguments may also be nonstandard
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
