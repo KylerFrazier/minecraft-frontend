@@ -6,10 +6,10 @@ services:
         image: kainosekai/minecraft-fe:latest
         container_name: minecraft-fe
         ports:
-            - 20080:80
+            - 20443:443
         extra_hosts:
             - host.docker.internal:host-gateway
         tty: true
         restart: unless-stopped
         volumes:
-            - /etc/nginx/certs:/etc/nginx/certs
+            - /etc/nginx/certs:/etc/ssl/certs
