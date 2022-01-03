@@ -3,7 +3,7 @@ version: "3"
 services:
     minecraft-fe:
         build: .
-        image: kainosekai/minecraft-fe
+        image: kainosekai/minecraft-fe:latest
         container_name: minecraft-fe
         ports:
             - 8080:80
