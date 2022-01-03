@@ -8,6 +8,7 @@ RUN yarn install && yarn build
 FROM nginx:1.21.4-alpine
 # TODO: I'm not sure if this serving location is standard convention
 WORKDIR /usr/share/nginx/html
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 RUN rm -rf ./*
 COPY --from=builder /app/build .
 # TODO: These entrypoint arguments may also be nonstandard
