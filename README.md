@@ -11,6 +11,7 @@ Install all of the prerequisites that you haven't installed before.
   * Install [NPM/Node](https://nodejs.org/en/)
   * In a terminal, run: `npm install --global yarn`
   * Run `yarn add react-router-dom`
+  * Run `yarn add react-bootstrap bootstrap@5.1.3`
 * Install [Git](https://gitforwindows.org/) (generally only needed for Windows devices).
 * Clone this repository: `git clone https://github.com/KylerFrazier/minecraft-website`.
 * Install the package dependencies with `yarn install`.

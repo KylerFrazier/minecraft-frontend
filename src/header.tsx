@@ -7,7 +7,9 @@ import {
 export const Header: React.FC = () => {
   return (
     <header>
+      <Link to="/">
         <img src={smallLogo} alt="logo" />
+      </Link>
     </header>
   )
 }
