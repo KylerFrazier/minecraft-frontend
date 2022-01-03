@@ -7,5 +7,7 @@ services:
         container_name: minecraft-fe
         ports:
             - 20080:80
+        extra_hosts:
+            - host.docker.internal:host-gateway
         tty: true
         restart: unless-stopped
