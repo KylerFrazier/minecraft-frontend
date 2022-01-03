@@ -8,10 +8,11 @@ This project is for the frontend of the [http://minecraft.KaiNoSekai.com](http:/
 Install all of the prerequisites that you haven't installed before.
 * Install [Docker](https://docs.docker.com/get-docker/).
 * Install Yarn (recommended but not required).
-  * Install [NPM/Node](https://nodejs.org/en/)
-  * In a terminal, run: `npm install --global yarn`
+  * Install [NPM/Node](https://nodejs.org/en/).
+  * In a terminal, run: `npm install --global yarn`.
 * Install [Git](https://gitforwindows.org/) (generally only needed for Windows devices).
-* Clone this repository: `git clone https://github.com/KylerFrazier/minecraft-website`
+* Clone this repository: `git clone https://github.com/KylerFrazier/minecraft-website`.
+* Install the package dependencies with `yarn install`.
 
 ## Production (in progress)
 
