@@ -11,3 +11,5 @@ services:
             - host.docker.internal:host-gateway
         tty: true
         restart: unless-stopped
+        volumes:
+            - /etc/nginx/certs:/etc/nginx/certs
