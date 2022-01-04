@@ -6,6 +6,6 @@ services:
         image: kainosekai/minecraft-fe
         container_name: minecraft-fe
         ports:
-            - 8080:80
+            - 20443:443
         tty: true
         restart: unless-stopped
