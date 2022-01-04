@@ -1,8 +1,10 @@
 # Layer 1: Node image for building the application
 FROM node:17-alpine AS builder
 WORKDIR /app
+COPY ./package.json .
+RUN yarn install
 COPY . .
-RUN yarn install && yarn build
+RUN yarn build
 
 # Layer 2: Nginx image for serving the website
 FROM nginx:1.21.4-alpine

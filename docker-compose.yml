@@ -7,9 +7,7 @@ services:
         container_name: minecraft-fe
         ports:
             - 20443:443
-        extra_hosts:
-            - host.docker.internal:host-gateway
         tty: true
         restart: unless-stopped
         volumes:
-            - /etc/nginx/certs:/etc/ssl/certs
+            - ${DOCKER_CERTS_PATH}:/etc/ssl/certs
