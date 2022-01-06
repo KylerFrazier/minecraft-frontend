@@ -10,5 +10,4 @@ services:
         tty: true
         restart: unless-stopped
         volumes:
-            - ${DOCKER_SSL_CERTS_PATH}:/etc/ssl/certs
-            - ${DOCKER_SSL_CONFS_PATH}:/etc/ssl/confs
+            - ${DOCKER_SSL_PATH}:/etc/ssl
