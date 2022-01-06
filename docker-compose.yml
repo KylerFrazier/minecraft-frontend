@@ -6,7 +6,7 @@ services:
         image: kainosekai/minecraft-fe:latest
         container_name: minecraft-fe
         ports:
-            - 20443:443
+            - 443:443
         tty: true
         restart: unless-stopped
         volumes:
