@@ -1,5 +1,5 @@
 import React from 'react';
-import smallLogo from './logo-small.png';
+import smallLogo from './logo-medium.png';
 import {
   Link
 } from "react-router-dom";
