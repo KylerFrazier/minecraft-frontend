@@ -6,7 +6,8 @@ services:
         image: kainosekai/minecraft-fe:latest
         container_name: minecraft-fe
         ports:
-            - ${PORT}:443
+            - ${PORT_HTTP}:80
+            - ${PORT_HTTPS}:443
         tty: true
         restart: unless-stopped
         volumes:
