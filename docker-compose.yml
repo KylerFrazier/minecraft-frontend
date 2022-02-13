@@ -1,14 +1,17 @@
-version: "3"
+version: "3.5"
 
 services:
-    minecraft-fe:
-        build: .
-        image: kainosekai/minecraft-fe:latest
-        container_name: minecraft-fe
-        ports:
-            - ${PORT_HTTP}:80
-            - ${PORT_HTTPS}:443
-        tty: true
-        restart: unless-stopped
-        volumes:
-            - ${DOCKER_SSL_PATH}:/etc/ssl
+  minecraft-fe:
+    build: .
+    image: kainosekai/minecraft-fe:latest
+    container_name: minecraft-fe
+    ports:
+      - ${PORT}:443
+    tty: true
+    restart: unless-stopped
+    volumes:
+      - ${DOCKER_SSL_PATH}:/etc/ssl
+
+networks:
+  infrared:
+    name: kainosekai
