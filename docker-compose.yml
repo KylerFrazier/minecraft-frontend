@@ -5,6 +5,8 @@ services:
     build: .
     image: kainosekai/minecraft-fe:latest
     container_name: minecraft-fe
+    networks:
+      - kainosekai
     ports:
       - ${PORT}:443
     tty: true
@@ -13,5 +15,5 @@ services:
       - ${DOCKER_SSL_PATH}:/etc/ssl
 
 networks:
-  infrared:
+  kainosekai:
     name: kainosekai
