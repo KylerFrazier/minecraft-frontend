@@ -30,9 +30,7 @@ cd "$parent_path"
 
 # Configure docker
 rm .env
-echo 'PORT_HTTP=80
-PORT_HTTPS=443
-DOCKER_SSL_PATH=./local_developement' >> .env
+echo 'DOCKER_SSL_PATH=./local_developement' >> .env
 
 # Wrap up
 echo '\nGenerated local settings.\n'
