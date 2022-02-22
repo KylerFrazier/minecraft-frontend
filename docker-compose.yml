@@ -3,7 +3,7 @@ version: "3.5"
 services:
   minecraft-fe:
     build: .
-    image: kainosekai/minecraft-frontend:latest
+    image: kylerfrazier/minecraft-frontend:latest
     container_name: minecraft-frontend
     networks:
       - kainosekai
