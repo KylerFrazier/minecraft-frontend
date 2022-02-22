@@ -1,0 +1,29 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Docker Login
+      env: 
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: Configure Docker Compose
+      env:
+        DOCKER_COMPOSE_ENV: ${{ secrets.DOCKER_COMPOSE_ENV }}
+      run: echo $DOCKER_COMPOSE_ENV > .env
+    - name: Build the Docker image
+      run: docker-compose build
+    - name: Push the Docker image
+      run: docker push kainosekai/minecraft-frontend:latest
