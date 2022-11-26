@@ -1,5 +1,5 @@
 # Layer 1: Node image for building the application
-FROM node:17-alpine AS builder
+FROM node:18-alpine AS builder
 WORKDIR /app
 COPY ./package.json .
 RUN yarn install
